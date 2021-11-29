@@ -1,4 +1,5 @@
 import random
+from typing import Counter
 
 array = random.sample(range(15),15)
 
@@ -8,16 +9,16 @@ def swap (i,j,array):
     array[i], array[i-1] = array[i-1], array[i]
     return array
 
-
-def bubbleSort(array):
-    while True:
-        change = False
-        for i in range (1,len(array)):
-            if array[i] < array[i-1]:
-                swap(i,i-1,array)
-                change = True
-        if change == False:
-            break 
+def selectionSort(array):
+    smallestIdx = 0
+    while smallestIdx < len(array) :
+        currentIdx = smallestIdx
+        for i in range(currentIdx, len(array)-1):
+            if array[i] < array[currentIdx]:
+                currentIdx = i
+        swap(currentIdx, smallestIdx, array)
+        smallestIdx += 1
     return array
 
-print (bubbleSort(array))
+
+print(selectionSort(array))
