@@ -9,16 +9,16 @@ def swap (i,j,array):
     array[i], array[i-1] = array[i-1], array[i]
     return array
 
-def selectionSort(array):
-    smallestIdx = 0
-    while smallestIdx < len(array) :
-        currentIdx = smallestIdx
-        for i in range(currentIdx, len(array)-1):
-            if array[i] < array[currentIdx]:
-                currentIdx = i
-        swap(currentIdx, smallestIdx, array)
-        smallestIdx += 1
+def selSort(array):
+    sI = 0
+    while sI < len(array) - 1:
+        cI = sI
+        for i in range(sI+1, len(array)):
+            if array[cI] > array[i]:
+                cI = i
+        swap(cI, sI, array)
+        sI += 1
+        
     return array
 
-
-print(selectionSort(array))
+print(array)
