@@ -7,6 +7,10 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Youtuber(models.Model):
+    
+    def __str__(self):
+        return self.name 
+        
     crew_choices = (
         ('solo', 'solo'),
         ('small', 'small'),
