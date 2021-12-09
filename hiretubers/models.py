@@ -5,7 +5,6 @@ from django.db.models.fields import IntegerField
 
 # Create your models here.
 
-
 class Hiretuber(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)

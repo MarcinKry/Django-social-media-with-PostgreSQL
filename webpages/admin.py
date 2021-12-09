@@ -14,5 +14,11 @@ class TeamAdmin(admin.ModelAdmin):
     list_display_links = ('first_name', 'id')
     search_fields = ('first_name', 'role')
     list_filter = ('role',)
-admin.site.register(Slider)
+
+class SliderAdmin(admin.ModelAdmin):
+    list_display = ('headline', 'photos', 'button_text')
+
+
+
+admin.site.register(Slider, SliderAdmin)
 admin.site.register(Team, TeamAdmin)

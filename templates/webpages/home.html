@@ -56,7 +56,9 @@
         <!-- person 1 -->
         <div class="card border-0 text-center ml-3 mr-3">
           <div class="feature-text">
-            <img src="{{fy.photo.url}}" class="card-img-top" alt="team-member">
+            <a href="{% url 'youtubers_detail' fy.id %}">
+              <img src="{{fy.photo.url}}" class="card-img-top" alt="team-member">
+                  </a>
             <span class="text-left bg-accent font-weight-bold">
               Featured
             </span>
@@ -99,8 +101,9 @@
         <!-- person 1 -->
         <div class="card border-0 text-center">
           <div>
-            <img src="{{at.photo.url}}" class="card-img-top" alt="team-member">
-
+            <a href="{% url 'youtubers_detail' at.id %}">
+              <img src="{{at.photo.url}}" class="card-img-top" alt="team-member">
+                  </a>
           </div>
           <div class="card-body">
             <h5 class="card-title">{{at.name}}</h5>
@@ -134,7 +137,7 @@
         <!-- team 1 -->
         {% for team in teams%}
         <div class="card border-0 text-center  ml-3 mr-3">
-          <img src="{{team.photo.url}}" class="card-img-top" alt="team-member">
+        <img src="{{team.photo.url}}" class="card-img-top" alt="team-member">
           <div class="card-body">
             <h5 class="card-title">{{team.first_name}}{{team.last_name}}</h5>
             <p class="card-text">{{team.role}}</p>
