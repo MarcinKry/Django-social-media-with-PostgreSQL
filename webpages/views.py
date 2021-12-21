@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Slider, Team
+from .models import Slider, Team, HeaderDetail, AboutUsText
 from youtubers.models import Youtuber
 
 def home(request):
@@ -17,8 +17,10 @@ def home(request):
 
 def about(request):
     teams = Team.objects.all()
+    text = AboutUsText.objects.all()
     data = {
         'teams' : teams,
+        'text' : text,
     }
     return render(request, 'webpages/about.html', data)
 
@@ -28,3 +30,9 @@ def services(request):
 def contact(request):
     return render(request, 'webpages/contact.html')
 
+def header(request):
+    header = HeaderDetail.objects.all()
+    data = {
+        'header' : header,
+    }
+    return render(request, 'includes/header.html', data)
