@@ -12,9 +12,6 @@ class Slider(models.Model):
     def __str__(self):
         return self.headline
 
-class HeaderDetail(models.Model):
-    email = models.CharField(max_length=255)
-    phone = models.CharField(max_length=100)
 
 class AboutUsText(models.Model):
     description = RichTextField()

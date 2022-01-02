@@ -25,5 +25,6 @@ urlpatterns = [
     path('hiretubers/', include('hiretubers.urls')),
     path('accounts/', include('accounts.urls')),
     path('socialaccounts/', include('allauth.urls')),
-    path('contacttubers/', include('contacttubers.urls'))
+    path('contacttubers/', include('contacttubers.urls')),
+    path('', include('header.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

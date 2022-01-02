@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 # Register your models here.
 
-from .models import HeaderDetail, Slider, Team, AboutUsText
+from .models import Slider, Team, AboutUsText
 
 
 class TeamAdmin(admin.ModelAdmin):
@@ -22,5 +22,4 @@ class SliderAdmin(admin.ModelAdmin):
 
 admin.site.register(Slider, SliderAdmin)
 admin.site.register(Team, TeamAdmin)
-admin.site.register(HeaderDetail)
 admin.site.register(AboutUsText)

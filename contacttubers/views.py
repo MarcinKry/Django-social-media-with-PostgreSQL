@@ -16,7 +16,6 @@ def contacttuber(request):
         subject = request.POST['subject']
         message = request.POST['message']
         
-
     #TODO: do all sanitization:
 
         contacttuber = Contacttuber(full_name = full_name, phone = phone, email = email, company_name = company_name, subject = subject, message = message)

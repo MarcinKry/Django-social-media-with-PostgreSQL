@@ -2,11 +2,11 @@
 <header class="header ">
     <div class="container">
       <div class="row ">
-        
+        {% for header in header %}
         <div class="col-md-6 header-info">
-          <a href="mailto:info@ytubers.com" class="mr-3"> kkkkk</a>
-          <span>Call at:  </span>
-          
+          <a href="mailto:info@ytubers.com" class="mr-3"> {{header.email}}</a>
+          <span>{{header.phone}}</span>
+          {% endfor %}
         </div>
         <div class="header-buttons col-md-6 d-flex justify-content-end">
           {% if user.is_authenticated %}

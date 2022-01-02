@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 INSTALLED_APPS = [
     'contacttubers.apps.ContacttubersConfig',
     'hiretubers.apps.HiretubersConfig',
+    'header.apps.HeaderConfig',
     'accounts.apps.AccountsConfig',
     'youtubers.apps.YoutubersConfig',
     'webpages.apps.WebpagesConfig',

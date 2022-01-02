@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('hiretuber', views.hiretuber, name = 'hiretuber'),
+    path('', views.header, name = 'header'),
+    
 ]
